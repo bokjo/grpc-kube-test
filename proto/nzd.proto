@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package nzd;
+
+message NZDRequest{
+    uint64 a = 1;
+    uint64 b = 2;
+}
+
+message NZDResponse {
+    uint64 result = 1;
+}
+
+service NZDService {
+    rpc Compute (NZDRequest) returns (NZDResponse) {}
+}

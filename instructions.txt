@@ -1,0 +1,2 @@
+# Generate the pb files 
+protoc -I proto/ proto/che.proto --go_out=plugins=grpc:proto
