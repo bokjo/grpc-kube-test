@@ -1,0 +1,13 @@
+FROM golang:1.11.0
+
+WORKDIR /go/src/github.com/bokjo/grpc-kube-test/nzd
+
+COPY nzd .
+COPY proto ../proto
+
+RUN go get -v ./...
+RUN go install -v ./...
+
+EXPOSE 3000
+
+CMD [ "nzd" ]
